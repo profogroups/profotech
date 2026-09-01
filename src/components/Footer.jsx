@@ -31,7 +31,8 @@ export default function Footer() {
         {/* Brand Column */}
         <div className="footer-brand-col">
           <Link to="/" className="footer-logo">
-            PROFOTECH
+            <img src="/logo.png" alt="Profotech Logo" className="footer-logo-img" />
+            <span>PROFOTECH</span>
           </Link>
           <p className="footer-desc">
             We design and build digital products, technology architectures, and growth platforms for businesses ready to move forward.
