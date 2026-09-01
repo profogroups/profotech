@@ -31,7 +31,7 @@ export default function About() {
                   Profotech is a technology and digital services company focused on designing, developing, and growing digital products for businesses and organizations.
                 </p>
                 <p>
-                  We combine software development, creative design, digital marketing, and practical engineering education to help ideas move smoothly from concept to execution. Led by partners Abdul Saleem T A, Mohamed Riffan, and Mohammed Jaffer, we build software that drives businesses forward.
+                  We combine software development, creative design, digital marketing, and practical engineering education to help ideas move smoothly from concept to execution. Led by Mohamed Rifan (Managing Director), Abdul Saleem & Mohamed Jafar (Technical Advisors), and Siva Ganesh & Hari Haran (Digital Marketing), we build software that drives businesses forward.
                 </p>
               </div>
             </Reveal>

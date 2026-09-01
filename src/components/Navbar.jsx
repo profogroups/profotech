@@ -66,7 +66,8 @@ export default function Navbar() {
         <div className="container navbar-container">
           {/* Logo */}
           <Link to="/" className="navbar-logo" data-cursor-text="HOME">
-            PROFOTECH
+            <img src="/logo.png" alt="Profotech Logo" className="navbar-logo-img" />
+            <span>PROFOTECH</span>
           </Link>
 
           {/* Desktop Navigation Links */}

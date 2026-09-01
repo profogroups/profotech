@@ -2,6 +2,7 @@ import React from "react";
 import PageTransition from "../components/PageTransition";
 import Reveal from "../components/Reveal";
 import Button from "../components/Button";
+import { teamMembers } from "../data/team";
 
 export default function AboutPage() {
   const values = [
@@ -91,25 +92,51 @@ export default function AboutPage() {
           <div className="about-team-section border-t">
             <Reveal>
               <div className="team-header">
-                <span className="text-uppercase-meta">[ PARTNERS ]</span>
+                <span className="text-uppercase-meta">[ LEADERSHIP & TEAM ]</span>
                 <h2 className="title-section team-title">OUR TEAM</h2>
               </div>
             </Reveal>
 
             <div className="team-grid">
-              {[
-                { name: "Abdul Saleem T A", role: "Product Studio Partner" },
-                { name: "Mohamed Riffan", role: "Creative & Engineering Partner" },
-                { name: "Mohamed Jafar", role: "Operations & Academy Partner" },
-              ].map((member, idx) => (
-                <Reveal key={member.name} delay={idx * 0.1}>
-                  <div className="team-card border">
-                    <span className="team-num text-uppercase-meta">0{idx + 1}</span>
-                    <h3 className="team-name">{member.name}</h3>
-                    <p className="team-role text-uppercase-meta">{member.role}</p>
-                  </div>
-                </Reveal>
-              ))}
+              {teamMembers.map((member, idx) => {
+                const displayIndex = String(idx + 1).padStart(2, "0");
+                return (
+                  <Reveal key={member.name} delay={idx * 0.08}>
+                    <div className="team-card border">
+                      <div className="team-image-container">
+                        <img
+                          src={member.image}
+                          alt={`${member.name} - ${member.role}`}
+                          className="team-image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="team-card-info">
+                        <div className="team-card-header">
+                          <span className="team-num text-uppercase-meta">{displayIndex}</span>
+                          <span className="team-role text-uppercase-meta">{member.role}</span>
+                        </div>
+                        <h3 className="team-name">
+                          {member.portfolio ? (
+                            <a
+                              href={member.portfolio}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="team-name-link link-editorial"
+                              data-cursor="true"
+                              data-cursor-text="VIEW"
+                            >
+                              {member.name} <span className="team-link-arrow">↗</span>
+                            </a>
+                          ) : (
+                            <span className="team-name-text">{member.name}</span>
+                          )}
+                        </h3>
+                      </div>
+                    </div>
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
 
